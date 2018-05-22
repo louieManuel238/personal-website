@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Manuel Louie Gayao</title>
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        {%load staticfiles%}
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="screen,projection" href="{% static 'personal/materialize/css/materialize.css'%}"/>
+        <link rel="stylesheet" type="text/css"  href="{% static 'personal/materialize/css/styles.css'%}"/>
+    </head>
+    <body>
+        <nav role="navigation">
+            <div class="nav-wrapper container">
+                <ul class="left hide-on-med-and-down">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About Me</a></li>
+                </ul>
+                <ul id="nav-mobile" class="sidenav hide-on-large-only">
+                    <li><a href="#">Nav</a></li>
+                    <li><a href="#">Nav</a></li>
+                    <li><a href="#">Nav</a></li>
+                </ul>
+                <a href="#" target="nav-mobile" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+        </nav>
+        <div id="index-banner">
+            <div class="section no-pad-bot">
+                <div class="container">
+                    <div class="header center">
+                        <img src="{%static 'personal/materialize/img/img1.jpg'%}" alt="" id="profile-pic" class="circle responsive-img"/>
+                    </div>
+                    <div class="row center">
+                        <h5>Manuel Louie Gayao</h5>
+                        <p>A few fun facts about myself
+                            I love french press coffee, I have a cat named after MacGyver, my favorite number
+                            is 22, I'm not a huge fan of IPAs, I play video games like it's my life, I knew what 
+                            I wanted to do at the age of 13, I do downhill mountain biking, my favorite food is bacon,
+                            and I broke my left arm twice.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separation">
+            <div class="container">
+                <div class="section">
+                    <div class="container">
+                        <div class="row center">
+                            <h3 class="header col s12 light">Projects</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="row">
+                        <div class="col l6 s12">
+                            <div class="project-img"><a class="modal-trigger" href="#modal-project1"><img src="{%static 'personal/materialize/img/project-img.jpg'%}" alt="Unsplashed background img 1"></a></div>
+                        </div>
+                        <div class="col l6 s12">
+                            <div class="project-img"><a class="modal-trigger" href="#modal-project2"><img src="{%static 'personal/materialize/img/project-img.jpg'%}" alt="Unsplashed background img 1"></a></div>
+                        </div>
+                    </div>
+                    <div class="row center">
+                        <a class="waves-effect waves-light btn-large #ffccbc deep-orange lighten-4">SEE MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="separation">
+        <div class="container">
+            <div class="section">
+                <div class="container">
+                    <div class="row center">
+                        <h3 class="header col s12 light">My Latest Blog</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col l12 s12">
+                <ul class="collection">
+                    <li class="collection-item ">
+                        <span class="title">blog 1 
+                            <a href="#!" class="secondary-content">
+                                <i class="material-icons">send</i>
+                            </a>
+                        </span>
+                        <p>This is a description of blog 1. Lorem ipsum???</p>
+                    </li>
+                    <li class="collection-item ">
+                        <span class="title">blog 2 
+                            <a href="#!" class="secondary-content">
+                                <i class="material-icons">send</i>
+                            </a>
+                        </span>
+                        <p>This is a description of blog 2. Lorem ipsssssssdadasdwdasdum???</p>
+                    </li>
+                    <li class="collection-item ">
+                        <span class="title">blog 3 
+                            <a href="#!" class="secondary-content">
+                                <i class="material-icons">send</i>
+                            </a>
+                        </span>
+                        <p>This is a description of blog 3ssssssssss. Lorem ipsum???</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <div class="separation">
+            <div class="container center col l12 s12">
+                <h3 class="center light">Instagram Feed</h3>
+                <!-- SnapWidget -->
+                <iframe src="https://snapwidget.com/embed/544908" class="snapwidget-widget col l12" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:650px; height:500px"></iframe>
+            </div>
+        </div>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l8 s12">
+                        <h5 class="white-text">Company Bio</h5>
+                        <p class="grey-text text-lighten-4">
+                            We are a team of college students working on this project like 
+                            it's our full time job. Any amount would help support and continue 
+                            development on this project and is greatly appreciated.
+                        </p>
+                    </div>
+                    <div class="col l4 s12">
+                        <h5>Connect</h5>
+                        <ul>
+                            <li><a class="white-text" href="#!"><i class="fa fa-facebook">Facebook</i></a></li>
+                            <li><a class="white-text" href="#!">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Modal Structure -->
+        <div id="modal-project1" class="modal">
+          <div class="modal-content">
+            <h4>Project 1</h4>
+            <p>A few fun facts about myself I love french press coffee, I have a
+                cat named after MacGyver, my favorite number is 22, I'm not a huge
+                fan of IPAs, I play video games like it's my life, I knew what I
+                wanted to do at the age of 13, I do downhill mountain biking, 
+                my favorite food is bacon, and I broke my left arm twice.</p>
+            <div class="section">
+                <h5>Search Records</h5>
+                <div class="valign-wrapper">
+                    <div class="slider">
+                        <ul class="slides">
+                          <li>
+                            <img src="https://lorempixel.com/580/250/nature/1"> <!-- random image -->
+                            <div class="caption center-align">
+                              <h3>This is our big Tagline!</h3>
+                              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                            </div>
+                          </li>
+                          <li>
+                            <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
+                            <div class="caption left-align">
+                              <h3>Left Aligned Caption</h3>
+                              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                            </div>
+                          </li>
+                          <li>
+                            <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
+                            <div class="caption right-align">
+                              <h3>Right Aligned Caption</h3>
+                              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                            </div>
+                          </li>
+                          <li>
+                            <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
+                            <div class="caption center-align">
+                              <h3>This is our big Tagline!</h3>
+                              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                </div>
+                
+                
+                
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+          </div>
+        </div>
+        <div id="modal-project2" class="modal">
+          <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+          </div>
+        </div>
+        <!-- End of Modal Structure -->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="{% static 'personal/materialize/js/materialize.js'%}"></script>
+        <script src="{% static 'personal/materialize/js/init.js' %}"></script>
+    </body>
+</html>
