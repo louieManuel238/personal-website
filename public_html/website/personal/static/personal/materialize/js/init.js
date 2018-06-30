@@ -2,7 +2,7 @@
   $(function(){
 
     $('.sidenav').sidenav();
-    $('.parallax').parallax();
+    $('.project-img').parallax();
     $('.modal').modal();
     $('.slider').slider();
   }); // end of document ready

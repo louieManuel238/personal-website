@@ -4,19 +4,64 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+{%load staticfiles%}
 <html>
     <head>
-      <title>Manuel Louie Gayao</title>
+        <title>Manuel Louie Gayao</title>
         <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        {%load staticfiles%}
+        
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" type="text/css" media="screen,projection" href="{% static 'personal/materialize/css/materialize.css'%}"/>
         <link rel="stylesheet" type="text/css"  href="{% static 'personal/materialize/css/styles.css'%}"/>
     </head>
     <body>
-        
+        {%block sidebar%}
+        <nav role="navigation">
+            <div class="nav-wrapper container">
+                <ul class="left hide-on-med-and-down">
+                    <li><a href="{%url 'index'%}">Home</a></li>
+                    <li><a href="{%url 'projects'%}">Projects</a></li>
+                    <li><a href="{%url 'blogs'%}">Blog</a></li>
+                    <li><a href="{%url 'aboutme'%}">About Me</a></li>
+                </ul>
+                <ul id="nav-mobile" class="sidenav hide-on-large-only">
+                    <li><a href="{%url 'index'%}">Home</a></li>
+                    <li><a href="{%url 'projects'%}">Projects</a></li>
+                    <li><a href="{%url 'blogs'%}">Blog</a></li>
+                    <li><a href="{%url 'aboutme'%}">About Me</a></li>
+                </ul>
+                <a href="#" target="nav-mobile" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+        </nav>
+        {%endblock%}
+        {%block content%}{%endblock%}
+        {%block footer%}
+            <footer class="page-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col l8 s12">
+                            <h5 class="white-text">Company Bio</h5>
+                            <p class="grey-text text-lighten-4">
+                                We are a team of college students working on this project like 
+                                it's our full time job. Any amount would help support and continue 
+                                development on this project and is greatly appreciated.
+                            </p>
+                        </div>
+                        <div class="col l4 s12">
+                            <h5>Connect</h5>
+                            <ul>
+                                <li><a class="white-text" href="#!"><i class="fa fa-facebook">Facebook</i></a></li>
+                                <li><a class="white-text" href="#!">Instagram</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        {%endblock%}
         
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="{% static 'personal/materialize/js/materialize.js'%}"></script>

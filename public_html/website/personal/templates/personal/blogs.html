@@ -1,0 +1,12 @@
+{% extends "personal/base.html"%}
+{% load staticfiles %}
+
+{%block content%}
+    {% for blog in list%}
+    <div class="container">
+        <h5>{{blog.title}}</h5>
+        <h6>{{blog.publishDate}}</h6>
+        <p>{{blog.content}}</p>
+    </div>
+    {%endfor%}
+{%endblock%}

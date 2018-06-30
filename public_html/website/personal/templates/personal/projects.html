@@ -1,64 +1,31 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>Manuel Louie Gayao</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        {%load staticfiles%}
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" media="screen,projection" href="{% static 'personal/materialize/css/materialize.css'%}"/>
-        <link rel="stylesheet" type="text/css"  href="{% static 'personal/materialize/css/styles.css'%}"/>
-    </head>
-    <body>
-        <nav role="navigation">
-            <div class="nav-wrapper container">
-                <ul class="left hide-on-med-and-down">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">About Me</a></li>
-                </ul>
-                <ul id="nav-mobile" class="sidenav hide-on-large-only">
-                    <li><a href="#">Nav</a></li>
-                    <li><a href="#">Nav</a></li>
-                    <li><a href="#">Nav</a></li>
-                </ul>
-                <a href="#" target="nav-mobile" class="sidenav-trigger">
-                    <i class="material-icons">menu</i>
-                </a>
-            </div>
-        </nav>
-        
-        <div class="container">
-                <div class="section">
-                    <div class="container">
-                        <div class="row center">
-                            <h3 class="header col s12 light">Projects</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="section">
-                    <div class="row">
-                        <div class="col l6 s12">
-                            <div class="project-img"><a class="modal-trigger" href="#modal-project1"><img src="{%static 'personal/materialize/img/project-img.jpg'%}" alt="Unsplashed background img 1"></a></div>
-                        </div>
-                        <div class="col l6 s12">
-                            <div class="project-img"><a class="modal-trigger" href="#modal-project2"><img src="{%static 'personal/materialize/img/project-img.jpg'%}" alt="Unsplashed background img 1"></a></div>
-                        </div>
-                        <div class="col l6 s12">
-                            <div class="project-img"><a class="modal-trigger" href="#modal-project1"><img src="{%static 'personal/materialize/img/project-img.jpg'%}" alt="Unsplashed background img 1"></a></div>
-                        </div>
-                        <div class="col l6 s12">
-                            <div class="project-img"><a class="modal-trigger" href="#modal-project2"><img src="{%static 'personal/materialize/img/project-img.jpg'%}" alt="Unsplashed background img 1"></a></div>
-                        </div>
-                    </div>
+{% extends "personal/base.html"%}
+{% load staticfiles%}
+{%block content%}
+    <div class="container">
+        <div class="section">
+            <div class="container">
+                <div class="row center">
+                    <h3 class="header col s12 light">Projects</h3>
                 </div>
             </div>
-    </body>
-</html>
+        </div>
+        <div class="section">
+            <div class="row">
+                <div class="col l6 s12">
+                    <div class="project-img-container">
+                        <a><img src="{%static 'personal/materialize/img/project-img.jpg'%}" alt="Unsplashed background img 1"></a>
+                    </div>
+                </div>
+                <div class="col l6 s12">
+                    <div class="project-img-container"><a class="modal-trigger" href="#modal-project2"><img src="{%static 'personal/materialize/img/project-img.jpg'%}" alt="Unsplashed background img 1"></a></div>
+                </div>
+                <div class="col l6 s12">
+                    <div class="project-img-container"><a class="modal-trigger" href="#modal-project1"><img src="{%static 'personal/materialize/img/background1.jpg'%}" alt="Unsplashed background img 1"></a></div>
+                </div>
+                <div class="col l6 s12">
+                    <div class="project-img-container"><a class="modal-trigger" href="#modal-project2"><img src="{%static 'personal/materialize/img/project-img.jpg'%}" alt="Unsplashed background img 1"></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{%endblock%}
