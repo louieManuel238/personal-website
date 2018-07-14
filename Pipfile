@@ -8,6 +8,7 @@ django = "*"
 django-allauth = "*"
 mysqlclient = "*"
 django-heroku = "*"
+gunicorn = "*"
 
 [dev-packages]
 
