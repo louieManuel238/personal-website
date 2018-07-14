@@ -10,8 +10,11 @@
                         <img src="{%static 'personal/materialize/img/img1.jpg'%}" alt="" id="profile-pic" class="circle responsive-img"/>
                     </div>
                     <div class="row center">
+                       
+                        {{title}}
+                       
                         <h5>Manuel Louie Gayao</h5>
-                        <p>A few fun facts about myself
+                        <p>A few fun facts about myself,
                             I love french press coffee, I have a cat named after MacGyver, my favorite number
                             is 22, I'm not a huge fan of IPAs, I play video games like it's my life, I knew what 
                             I wanted to do at the age of 13, I do downhill mountain biking, my favorite food is bacon,
@@ -35,9 +38,11 @@
                         {% for project in projects %}
                         <div class="col l6 s12">
                             <div class="project-img-container">
-                                <div class="section no-pad-bot z-depth-2 valign-wrapper teal">
-                                    <h5 class="header col s12 l12 m12 light">{{project.title}}</h5>
-                                </div>
+                                <a href="{%url 'project_items' project.id%}">
+                                    <div class="section no-pad-bot z-depth-2 valign-wrapper teal lighten-3">
+                                        <h5 class="header col s12 l12 m12 ">{{project.title}}</h5>
+                                    </div>
+                                </a>
                                     <img src="{% static '' %}{{project.thumbnail_url}}" alt="Unsplashed background img 1">
                             </div>
                         </div>
@@ -80,24 +85,5 @@
                 <!-- SnapWidget -->
                 <iframe src="https://snapwidget.com/embed/544908" class="snapwidget-widget col l12" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:650px; height:500px"></iframe>
             </div>
-        </div>
-        
-                
-                
-            </div>
-          </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-          </div>
-        </div>
-        <div id="modal-project2" class="modal">
-          <div class="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
-          </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-          </div>
-        </div>
-        <!-- End of Modal Structure -->
+        </div>   
 {%endblock%}

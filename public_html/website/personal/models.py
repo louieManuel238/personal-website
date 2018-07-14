@@ -38,7 +38,7 @@ class ProjectImgs(models.Model):
     images for a project
     """
     
-    project_id = models.ForeignKey(Project, on_delete=models.CASCADE)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
     img_url = models.TextField()
     
     def __str__(self):
@@ -46,3 +46,19 @@ class ProjectImgs(models.Model):
     
     def get_absolute_url(self):
         return reverse('project_Images',args=[str(self.id)])
+    
+class AboutMe(models.Model):
+    """
+        
+    """
+    
+    
+class Education(models.Model):
+    """
+    Educations and Trainings model
+    """
+
+class Hobbies(models.Model):
+    """
+    Books, Games
+    """

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{%extends "personal/base.html"%}
+{%load staticfiles%}
+
+{% block content%}
+<div class="row">
+    <div class="section project-header col s12 l12">
+        <h1 class="center">{{project.title}}</h1>
+        <span class="center"><p>{{project.description}}</p></span>
+        <img src="{% static '' %}{{project.thumbnail_url}}"/>
+    </div>
+</div>
+<div class="container ">
+    
+    <div class="project-img-container">
+    {%for img in imgs%}
+        <div class="img-div">
+            <img src="{% static '' %}{{img.img_url}}"/>
+        </div>
+    {%endfor%}
+    </div>
+</div>
+{%endblock%}

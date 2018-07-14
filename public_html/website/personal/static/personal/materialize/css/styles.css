@@ -20,6 +20,9 @@ and open the template in the editor.
     height: 300px;
     margin-bottom: 20px;
 }
+.project-img-container .img-div img{
+    height: 100%
+}
 
 .project-img-container {
     position: relative;
@@ -37,6 +40,13 @@ and open the template in the editor.
     opacity: 0;
     transition: .5s ease;
   }
-  .project-img-container:hover .section{
-      opacity: 1;
-  }
+.project-img-container:hover .section{
+    opacity: 1;
+}
+
+.project-header img{
+    width: 100%;
+}
+.img-div{
+    margin-bottom: 50px;
+}
