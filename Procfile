@@ -1,1 +1,1 @@
-web: gunicorn /public_html/website/website.wsgi —-log-file -
+web: gunicorn --pythonpath public_html/website website.wsgi —-log-file -
