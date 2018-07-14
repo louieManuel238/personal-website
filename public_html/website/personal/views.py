@@ -1,14 +1,11 @@
 from django.shortcuts import render
 from . models import Blog, Project, ProjectImgs
-import requests
 
 # Create your views here.
 def index(request):
     blog_list = Blog.objects.all()[:3]
     project_list = Project.objects.all()[:2]
-    response = requests.get('http://localhost:8001/api/v1/bucketlist/1/')
-    data = response.json()
-    return render(request, 'personal/index.html', {'blogs': blog_list, 'projects': project_list, 'title': data['title']})
+    return render(request, 'personal/index.html', {'blogs': blog_list, 'projects': project_list})
 
 def projects(request):
     project_list = Project.objects.all()
