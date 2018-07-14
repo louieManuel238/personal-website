@@ -1,0 +1,52 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 12, 2018, 8:59:10 PM
+    Author     : myLocalAccount
+*/
+
+#profile-pic {
+    width: 20%;
+}
+.separation:nth-child(odd){
+    background: whitesmoke;
+}
+.project-img-container img{
+    display: block;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+}
+.project-img-container .img-div img{
+    height: 100%
+}
+
+.project-img-container {
+    position: relative;
+    display: block;
+    min-height: 200px;
+    line-height: 0;
+    height: auto;
+    width: 100%;
+}
+  .project-img-container .section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: .5s ease;
+  }
+.project-img-container:hover .section{
+    opacity: 1;
+}
+
+.project-header img{
+    width: 100%;
+}
+.img-div{
+    margin-bottom: 50px;
+}
