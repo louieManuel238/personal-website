@@ -15,5 +15,4 @@ from whitenoise.django import DjangoWhiteNoise
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "website.settings")
 
 application = get_wsgi_application()
-application = DjangoWhiteNoise(application)
-application.add_files('/personal/static', prefix='static/')
+application = DjangoWhiteNoise(application, root = '/staticfiles')
