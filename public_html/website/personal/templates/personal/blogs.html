@@ -2,11 +2,20 @@
 {% load staticfiles %}
 
 {%block content%}
-    {% for blog in list%}
-    <div class="container">
-        <h5>{{blog.title}}</h5>
-        <h6>{{blog.publishDate}}</h6>
-        <p>{{blog.content}}</p>
+	<div class="container">
+		<div class="section">
+            <div class="container">
+                <div class="row center">
+                    <h3 class="header col s12 light">BLOGS</h3>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+	    {% for blog in list%}
+	        <h5>{{blog.title}}</h5>
+	        <h6>{{blog.publishDate}}</h6>
+	        <p>{{blog.content}}</p>
+	    {%endfor%}
+		</div>
     </div>
-    {%endfor%}
 {%endblock%}

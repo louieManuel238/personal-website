@@ -3,8 +3,8 @@ from . models import Blog, Project, ProjectImgs
 
 # Create your views here.
 def index(request):
-    blog_list = Blog.objects.all()[:3]
-    project_list = Project.objects.all()[:2]
+    blog_list = Blog.objects.all()
+    project_list = Project.objects.all()
     return render(request, 'personal/index.html', {'blogs': blog_list, 'projects': project_list})
 
 def projects(request):
