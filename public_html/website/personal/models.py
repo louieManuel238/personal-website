@@ -2,12 +2,20 @@ from django.db import models
 from datetime import date
 
 # Create your models here.
+class Profile(models.Model):
+    """
+    Basic information about the user
+    """
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    photo = models.TextField(null=True)
+
 class Project(models.Model):
     """
     Projects information
     """
     #fields
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=225)
     description = models.TextField(max_length=500)
     thumbnail_url = models.TextField(null=True)
     

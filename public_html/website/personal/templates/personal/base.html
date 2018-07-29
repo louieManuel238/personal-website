@@ -26,13 +26,14 @@ and open the template in the editor.
                     <li><a href="{%url 'blogs'%}">Blog</a></li>
                     <li><a href="{%url 'aboutme'%}">About Me</a></li>
                 </ul>
-                <ul id="nav-mobile" class="sidenav hide-on-large-only">
+
+                <ul id="nav-mobile" class="sidenav">
                     <li><a href="{%url 'index'%}">Home</a></li>
                     <li><a href="{%url 'projects'%}">Projects</a></li>
                     <li><a href="{%url 'blogs'%}">Blog</a></li>
                     <li><a href="{%url 'aboutme'%}">About Me</a></li>
                 </ul>
-                <a href="#" target="nav-mobile" class="sidenav-trigger">
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger">
                     <i class="material-icons">menu</i>
                 </a>
             </div>
@@ -43,19 +44,35 @@ and open the template in the editor.
             <footer class="page-footer">
                 <div class="container">
                     <div class="row">
-                        <div class="col l8 s12">
-                            <h5 class="white-text">Company Bio</h5>
-                            <p class="grey-text text-lighten-4">
-                                We are a team of college students working on this project like 
-                                it's our full time job. Any amount would help support and continue 
-                                development on this project and is greatly appreciated.
-                            </p>
+                        <div class="col l10 s12">
+                            <h5 class="white-text">Contact Me</h5>
+                            <form id="contact_form" action="{%url 'contact'%}" method="POST">
+                                {%csrf_token%}
+                                <div class="row">
+                                    <div class="input-field">
+                                        <input id="email" type="email" class="validate" name="email">
+                                        <!--{{form.email}}-->
+                                        <label for="email">Email</label>
+                                    </div>
+                                    <div class="input-field">
+                                        <textarea id="message" class="materialize-textarea" name="message"></textarea>
+                                        <!--{{form.message}}-->
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <button class="btn waves-effect waves-light #ffccbc deep-orange lighten-2" type="submit" name="action">Submit
+                                        <i class="material-icons right">send</i>
+                                    </button>
+                                </div>
+                            </form>
                         </div>
-                        <div class="col l4 s12">
+                        <div class="col l2 s12">
                             <h5>Connect</h5>
                             <ul>
+                                <li><a href="https://www.linkedin.com/in/manuel-1ouie/">LinkedIn</a></li>
                                 <li><a class="white-text" href="#!"><i class="fa fa-facebook">Facebook</i></a></li>
-                                <li><a class="white-text" href="#!">Instagram</a></li>
+                                <li><a class="white-text" href="https://www.instagram.com/manuelgayao">Instagram</a></li>
                             </ul>
                         </div>
                     </div>
