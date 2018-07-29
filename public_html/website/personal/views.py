@@ -9,7 +9,7 @@ from .forms import ContactForm
 def index(request):
     blog_list = Blog.objects.all()[:3]
     project_list = Project.objects.all()[:2]
-    profile = Profile.objects.all()[:1]
+    profile = Profile.objects.get(pk = 1)
     return render(request, 'personal/index.html', {'blogs': blog_list, 'projects': project_list, 'profile': profile})
 
 def projects(request):
