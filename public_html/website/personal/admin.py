@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from personal.models import Project, Blog
+from personal.models import Project, Blog, Profile
 
 class ProjectAdmin(admin.ModelAdmin):
 	pass
@@ -13,3 +13,8 @@ class BlogAdmin(admin.ModelAdmin):
 	pass
 
 admin.site.register(Blog, BlogAdmin)
+
+class ProfileAdmin(admin.ModelAdmin):
+        pass
+
+admin.site.register(Profile, ProfileAdmin)
