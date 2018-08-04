@@ -1,18 +1,20 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
     Created on : May 12, 2018, 8:59:10 PM
-    Author     : myLocalAccount
+    Author     : Manuel
 */
-
+body{
+    font-family: sans-serif;
+    font-size: larger;
+}
 #profile-pic {
     width: 20%;
 }
+.separation{
+    min-height: 100vh;
+}
 .separation:nth-child(odd){
     background: whitesmoke;
+    
 }
 .project-img-container img{
     display: block;
@@ -51,6 +53,8 @@ and open the template in the editor.
 .img-div{
     margin-bottom: 50px;
 }
+/*** Contct Form ***/
+/*label color*/
 .input-field label{
      color: white;
 }
@@ -66,4 +70,10 @@ and open the template in the editor.
 }
 .input-field{
     color: white;
+}
+
+/* About me*/
+.aboutme_profile{
+    width: 300px;
+    height: 400px;
 }

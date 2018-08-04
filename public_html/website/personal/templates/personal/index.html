@@ -3,15 +3,17 @@
 {%load static%}
 
 {%block content%}
-        <div id="index-banner">
-            <div class="section no-pad-bot">
-                <div class="container">
-                    <div class="header center">
-                        <img src="{%static 'personal/materialize/img/img1.JPG'%}" alt="Profile Picture" id="profile-pic" class="circle responsive-img"/>
-                    </div>
-                    <div class="row center">
-                        <h5>{{profile.name}}</h5>
-                        <p>{{profile.description}}</p>
+        <div class="separation">
+            <div id="index-banner">
+                <div class="section no-pad-bot">
+                    <div class="container">
+                        <div class="header center">
+                            <img src="{%static 'personal/materialize/img/img1.JPG'%}" alt="Profile Picture" id="profile-pic" class="circle responsive-img"/>
+                        </div>
+                        <div class="row center">
+                            <h5>{{profile.name}}</h5>
+                            <p>{{profile.description}}</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -75,7 +77,9 @@
             <div class="container center col l12 s12">
                 <h3 class="center light">Instagram Feed</h3>
                 <!-- SnapWidget -->
-                <iframe src="https://snapwidget.com/embed/544908" class="snapwidget-widget col l12" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:650px; height:500px"></iframe>
+               <!-- SnapWidget -->
+<script src="https://snapwidget.com/js/snapwidget.js"></script>
+<iframe src="https://snapwidget.com/embed/544908" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
             </div>
         </div>   
 {%endblock%}
