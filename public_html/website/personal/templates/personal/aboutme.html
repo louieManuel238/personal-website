@@ -3,6 +3,17 @@
 {%load staticfiles%}
 
 {% block content%}
+<div class="separation row">
+    <div class="aboutme_header z-depth-0">
+        <div id="img-header">
+            <img src="{%static 'personal/materialize/img/aboutme/profile_banner.jpg'%}" alt="Unsplashed background img 2">
+            <div class="container">
+                <h5 class="header col s12">HELLO, <br> I'M <br><br> <span class="profile_name">MANUEL LOUIE</span></h5>
+            </div>
+        </div>
+        
+    </div>
+</div>
 <div class="separation">
     <div class="container">
         <div class="section">
@@ -13,81 +24,151 @@
         <div class="section">
             <div class="row">
                 <div class="valign-wrapper col l5">
-                    <img class="aboutme_profile" src="{%static 'personal/materialize/img/aboutme/manuel.jpg'%}" alt="profile"/>
+                    <div class="aboutme_profile">
+                        <img src="{% static 'personal/materialize/img/aboutme/manuel2.jpg'%}"/>
+                    </div>
                 </div>
                 <p class="col l3">
                     Manuel is a developer who moved to Canada from the Philippines in 2018.
+                    He is a freelance web application developer striving for success in the
+                    real world. 
                 </p>
             </div>
         </div>
     </div>
 </div>
-	<div class="separation">
-		<div class="container">
-			<div class="section">
-				<h5 class="header">Education</h5>
-			</div>
-			<div class="section">
-				<ul class="collection">
-					<li class="collection-item">
-						<span class="title">Bachelor of Science in Computer Science <span class="secondary-content">May 2015</span></span>
-						<p>Saint Louis University, Philippines</p>
-					</li>
-					<li class="collection-item">
-						<span class="title">Computer Systems Servicing <span class="secondary-content">March 2018</span></span>
-						<p>Informatics Institute, Philippines</p>
-					</li>
-				</ul>
-			</div>
-			<div class="section">
-				<ul class="collection">
-					<li class="collection-item">
-						<span class="title">Freedom of Information And Protection of Privacy <span class="secondary-content">April 2018</span></span>
-						<p>Government of Alberta, Canada</p>
-					</li>
-					<li class="collection-item">
-						<span class="title">National Certificate II in Computer Systems Servicing <span class="secondary-content">March 2018</span></span>
-						<p>Technical Education Skills And Development Authority, Philippines</p>
-					</li>
-					<li class="collection-item">
-						<span class="title">Career Service Professional Eligible<span class="secondary-content">April 2017</span></span>
-						<p>Civil Service Commission, Philippines</p>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="separation">
-		<div class="container">
-			<div class="section">
-				<h5 class="header">Hobies</h5>
-			</div>
-			<div class="section">
-				<h6>Music</h6>
-				<p>I've been part of the university orchestra</p>
-			</div>
-			<div class="section">
-				<h6>Books</h6>
-				<p>I've been interested in pop-psychology</p>
-                                <ul class="collection">
-                                    <li class="collection-item"><a target="_blank"  href="https://www.amazon.ca/gp/product/0316346624/ref=as_li_tl?ie=UTF8&camp=15121&creative=330641&creativeASIN=0316346624&linkCode=as2&tag=mypersonal063-20&linkId=a0b4600cd3f68a50434ce7ace18c2842"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=0316346624&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=mypersonal063-20" ></a><img src="//ir-ca.amazon-adsystem.com/e/ir?t=mypersonal063-20&l=am2&o=15&a=0316346624" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></li>
-                                </ul>
+<div class="separation">
+    <div class="container">
+        <div class="section">
+          <!--   Icon Section   -->
+            <div class="row">
+              <div class="col s12 m6">
+                <div class="icon-block">
+                    <h2 class="center brown-text"><i class="material-icons">school</i></h2>
+                    <h5 class="center">Education</h5>
+                    <div>
+                        <ul class="collection light">
+                            <li class="collection-item">
+                                <span class="title">Bachelor of Science in Computer Science <span class="secondary-content">2015</span></span>
+                                <i>Saint Louis University, Philippines</i>
+                            </li>
+                            <li class="collection-item">
+                                <span class="title">Computer Systems Servicing <span class="secondary-content">2018</span></span>
+                                <i>Informatics Institute, Philippines</i>
+                            </li>
+                            <li class="collection-item">
+                                <span class="title">Freedom of Information And Protection of Privacy <span class="secondary-content">2018</span></span>
+                                <i>Government of Alberta, Canada</i>
+                            </li>
+                            <li class="collection-item">
+                                    <span class="title">Career Service Professional Eligible<span class="secondary-content">2017</span></span>
+                                    <i>Civil Service Commission, Philippines</i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
 
-			</div>
-			<div class="section">
-				<h6>Games</h6>
-				<p>Mobile Games</p>
-			</div>
-		</div>
-	</div>
-	<div class="separation">
-		<div class="container">
-			<div class="section">
-				<h5 class="header">Resume</h5>
-			</div>
-			<div class="section">
-				<a href="#">Download PDF</a><br>
-			</div>
-		</div>
-	</div>
+                <div class="col s12 m6">
+                    <div class="icon-block">
+                        <h2 class="center brown-text"><i class="material-icons">work</i></h2>
+                        <h5 class="center">Work Experience</h5>
+                        <div>
+                            <ul class="collection light">
+                                <li class="collection-item">
+                                    <span class="title">Freelance Developer<span class="secondary-content">2017-2018</span></span>
+                                    <i>Baguio City, Philippines</i>
+                                </li>
+                                <li class="collection-item">
+                                    <span class="title">Computer Programmer I <span class="secondary-content">2016-2017</span></span>
+                                    <i>Local Government of Itogon, Philippines</i>
+                                </li>
+                                <li class="collection-item">
+                                    <span class="title">Assistant System Administrator, Trainee
+                                        <span class="secondary-content">2014</span>
+                                    </span>
+                                    <i>Professional Regulation Commission, CAR, Philippines</i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="separation">
+    <div class="container">
+        <div class="section">
+                <h5 class="header">Hobbies</h5>
+        </div>
+        <div class="section">
+            <div class="valign-wrapper row">
+                <p class="col l6">I got into music when i was enrolled in guitar music lessons when I was 12.
+                    It's a little late to be considered as a protege but early to be interested in it.
+                    I stopped for some time since I'm not making any progress and took lessons in flute before starting 
+                    university. I then auditioned in the university orchestra after taking their training program.
+                    Being in the organization until I graduated, partly for the scholarship, I can say that I am a bit better.
+                </p>
+                <div class="aboutme_profile">
+                    <img src="{%static 'personal/materialize/img/aboutme/flute.jpg'%}" alt="Flute"/>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <p>I read books and listen to audiobooks, not a lot just a normal amount. 
+                Here are some of my favorite books.</p>
+                <ul class="carousel">
+                    <li class="carousel-item">
+                        <a target="_blank"  href="https://www.amazon.ca/gp/product/0385526024/ref=as_li_tl?ie=UTF8&camp=15121&creative=330641&creativeASIN=0385526024&linkCode=as2&tag=mypersonal063-20&linkId=af60cf864c40fe48681fb0d5a6f6f293">
+                            <img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=0385526024&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=mypersonal063-20" >
+                        </a>
+                        <img src="//ir-ca.amazon-adsystem.com/e/ir?t=mypersonal063-20&l=am2&o=15&a=0385526024" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    </li>
+                    <li class="carousel-item">
+                        <a target="_blank"  href="https://www.amazon.ca/gp/product/0316346624/ref=as_li_tl?ie=UTF8&camp=15121&creative=330641&creativeASIN=0316346624&linkCode=as2&tag=mypersonal063-20&linkId=c8b2b14cbf38fab07343daad94ee8f4d">
+                            <img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=0316346624&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=mypersonal063-20" >
+                        </a>
+                        <img src="//ir-ca.amazon-adsystem.com/e/ir?t=mypersonal063-20&l=am2&o=15&a=0316346624" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    </li>
+                    <li class="carousel-item">
+                        <a target="_blank"  href="https://www.amazon.ca/gp/product/1589795474/ref=as_li_tl?ie=UTF8&camp=15121&creative=330641&creativeASIN=1589795474&linkCode=as2&tag=mypersonal063-20&linkId=876c2aa8148a6f12d863f28096da6fff">
+                            <img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=1589795474&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=mypersonal063-20" >
+                        </a>
+                            <img src="//ir-ca.amazon-adsystem.com/e/ir?t=mypersonal063-20&l=am2&o=15&a=1589795474" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    </li>
+                    <li class="carousel-item">
+                       <a target="_blank"  href="https://www.amazon.ca/gp/product/0385680910/ref=as_li_tl?ie=UTF8&camp=15121&creative=330641&creativeASIN=0385680910&linkCode=as2&tag=mypersonal063-20&linkId=472cb73d73803e9e55d08a4afbce4600">
+                           <img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=0385680910&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=mypersonal063-20" >
+                       </a>
+                        <img src="//ir-ca.amazon-adsystem.com/e/ir?t=mypersonal063-20&l=am2&o=15&a=0385680910" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    </li>
+                    <li class="carousel-item">
+                     <a target="_blank"  href="https://www.amazon.ca/gp/product/1592407366/ref=as_li_tl?ie=UTF8&camp=15121&creative=330641&creativeASIN=1592407366&linkCode=as2&tag=mypersonal063-20&linkId=034c0cc27c412d79f75a1d94b400d03c">
+                         <img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=1592407366&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=mypersonal063-20" >
+                     </a>
+                        <img src="//ir-ca.amazon-adsystem.com/e/ir?t=mypersonal063-20&l=am2&o=15&a=1592407366" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    </li>
+                </ul>
+            <div class="row center">
+                <a href="#" class="waves-effect waves-light btn-large #ffccbc deep-orange lighten-4">Check Out Other Books I Read</a>
+            </div>
+        </div>
+        <div class="section">
+                <h6>Games</h6>
+                <p>Mobile Games</p>
+        </div>
+    </div>  
+</div>
+<div class="separation">
+<div class="container">
+        <div class="section">
+                <h5 class="header">Resume</h5>
+        </div>
+        <div class="section">
+                <a href="#">Download PDF</a><br>
+        </div>
+</div>
+</div>
 {%endblock%}
