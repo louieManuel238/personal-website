@@ -13,13 +13,13 @@
     
     <div class="project-img-container">
         <div class="img-div">
-        <img src="{% static '' %}{{project.thumbnail_url}}"/>
-    {%for img in imgs%}
-        
-            <img src="{% static '' %}{{img.img_url}}"/>
-        
-    {%endfor%}
-    </div>
+            <img src="{% static '' %}{{project.thumbnail_url}}"/><br>
+        {%for img in imgs%}
+            <div class="project_imgs">
+                <img src="{% static '' %}{{img.img_url}}"/>
+            </div>
+        {%endfor%}
+        </div>
     </div>
 </div>
 {%endblock%}

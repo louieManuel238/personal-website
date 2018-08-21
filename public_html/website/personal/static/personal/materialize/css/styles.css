@@ -102,3 +102,10 @@ body{
     display: block;
     color: #004d40;
 }
+
+/******************
+    Projects
+*******************/
+.img-div .project_imgs{
+    margin-bottom: 50px;
+}
