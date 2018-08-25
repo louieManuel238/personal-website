@@ -113,6 +113,7 @@ class Book(models.Model):
     title = models.CharField(max_length=100)
     link = models.TextField(null=True)
     author = models.CharField(max_length = 200, null=True)
+    
     def __str__(self):
         return self.title
     
