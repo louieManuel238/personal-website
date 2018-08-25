@@ -3,7 +3,7 @@ from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponseRedirect
 
 from .forms import ContactForm
-from . models import Blog, Project, ProjectImgs, Profile, AboutMe, Education, WorkExperience, Book
+from . models import Blog, Project, ProjectImgs, Profile, AboutMe, Education, WorkExperience
 
 # Create your views here.
 def index(request):

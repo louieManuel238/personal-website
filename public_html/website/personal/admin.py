@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from personal.models import Project, Blog, Profile, ProjectImgs, AboutMe, Education, WorkExperience, Book
+from personal.models import Project, Blog, Profile, ProjectImgs, AboutMe, Education, WorkExperience
 
 class ProfileAdmin(admin.ModelAdmin):
     pass
@@ -42,4 +42,4 @@ admin.site.register(Education, EducationAdmin)
 
 admin.site.register(WorkExperience, WorkExperienceAdmin)
 
-admin.site.register(Book, BookAdmin)
+#admin.site.register(Book, BookAdmin)
