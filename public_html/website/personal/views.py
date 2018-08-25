@@ -3,7 +3,7 @@ from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponseRedirect
 
 from .forms import ContactForm
-from . models import Blog, Project, ProjectImgs, Profile, AboutMe, Education, WorkExperience
+from . models import Blog, Project, ProjectImgs, Profile, AboutMe, Education, WorkExperience, Book
 
 # Create your views here.
 def index(request):
@@ -24,9 +24,9 @@ def aboutme(request):
     about_me = AboutMe.objects.first()
     education = Education.objects.order_by('-endDate','-startDate')
     workExperience = WorkExperience.objects.order_by('-endDate','-startDate')
-    #book = Book.objects.all()
+    book = Book.objects.all()
     return render(request, 'personal/aboutme.html', context={'aboutMe': about_me,
-'education':education, 'workExperience':workExperience})
+'education':education, 'workExperience':workExperience, 'book':book})
 
 def project_items(request, project_id="0"):
     project_imgs = ProjectImgs.objects.filter(project_id = project_id)
