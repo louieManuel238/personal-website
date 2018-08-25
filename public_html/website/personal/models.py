@@ -1,5 +1,5 @@
 from django.db import models
-
+from datetime import datetime
 # Create your models here.
 class Profile(models.Model):
     """
@@ -38,7 +38,7 @@ class Blog(models.Model):
     #fields
     title = models.CharField(max_length=100)
     content = models.TextField()
-    publishDate = models.DateTimeField(auto_now_add=True)
+    publishDate = models.DateTimeField(auto_now=True, blank=True)
     thumbnail_url = models.TextField(null=True)
     
     def __str__(self):
@@ -112,6 +112,7 @@ class Book(models.Model):
     """
     title = models.CharField(max_length=100)
     link = models.TextField(null=True)
+    author = models.CharField(max_length=100, null=True)
     
     def __str__(self):
         return self.title
