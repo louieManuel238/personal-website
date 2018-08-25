@@ -24,7 +24,7 @@ def aboutme(request):
     about_me = AboutMe.objects.first()
     education = Education.objects.order_by('-endDate','-startDate')
     workExperience = WorkExperience.objects.order_by('-endDate','-startDate')
-    book = Book.objects.all()
+    #book = Book.objects.all()
     return render(request, 'personal/aboutme.html', context={'aboutMe': about_me,
 'education':education, 'workExperience':workExperience, 'book':book})
 
