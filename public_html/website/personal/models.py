@@ -1,5 +1,4 @@
 from django.db import models
-from datetime import date
 
 # Create your models here.
 class Profile(models.Model):
@@ -8,15 +7,22 @@ class Profile(models.Model):
     """
     name = models.CharField(max_length=100)
     description = models.TextField()
+    title = models.CharField(max_length=225, null=True)
     photo = models.TextField(null=True)
-
+    
+    def __str__(self):
+        return self.name
+    
+    def get_absolute_url(self):
+        return reverse('profile',args=[str(self.id)])
+    
 class Project(models.Model):
     """
     Projects information
     """
     #fields
     title = models.CharField(max_length=225)
-    description = models.TextField(max_length=500)
+    description = models.TextField()
     thumbnail_url = models.TextField(null=True)
     
     def __str__(self):
@@ -57,16 +63,58 @@ class ProjectImgs(models.Model):
     
 class AboutMe(models.Model):
     """
-        
+        Personal Information
     """
+    personalDescription = models.TextField(null=True)
+    personalImg = models.CharField(max_length=300, null=True)
+    hobbyDescription = models.TextField(null=True)
+    hobbyImg = models.CharField(max_length=300, null=True)
     
+    def __str__(self):
+        return self.img_url
+    
+    def get_absolute_url(self):
+        return reverse('project_Images',args=[str(self.id)])
     
 class Education(models.Model):
     """
     Educations and Trainings model
     """
+    title = models.CharField(max_length=225,null=True)
+    startDate = models.IntegerField(null=True)
+    endDate = models.IntegerField(null=True)
+    institution = models.CharField(max_length=225,null=True)
+    
+    def __str__(self):
+        return self.img_url
+    
+    def get_absolute_url(self):
+        return reverse('project_Images',args=[str(self.id)])
+    
+class WorkExperience(models.Model):
+    """
+    Work Experiences
+    """
+    title = models.CharField(max_length=225,null=True)
+    startDate = models.IntegerField(null=True)
+    endDate = models.IntegerField(null=True)
+    institution = models.CharField(max_length=225,null=True)
+    
+    def __str__(self):
+        return self.img_url
+    
+    def get_absolute_url(self):
+        return reverse('project_Images',args=[str(self.id)])
 
-class Hobbies(models.Model):
+class Book(models.Model):
     """
-    Books, Games
+    Books and affiliate marketing links
     """
+    title = models.CharField(max_length=100)
+    link = models.TextField(null=True)
+    author = models.CharField(max_length = 200, null=True)
+    def __str__(self):
+        return self.img_url
+    
+    def get_absolute_url(self):
+        return reverse('project_Images',args=[str(self.id)])

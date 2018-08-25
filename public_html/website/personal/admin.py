@@ -2,24 +2,20 @@ from django.contrib import admin
 
 # Register your models here.
 
-from personal.models import Project, Blog, Profile, ProjectImgs
+from personal.models import Project, Blog, Profile, ProjectImgs, AboutMe, Education, WorkExperience, Book
 
-class ProjectAdmin(admin.ModelAdmin):
-    pass
+admin.site.register(Project)
 
-admin.site.register(Project, ProjectAdmin)
+admin.site.register(Blog)
 
-class BlogAdmin(admin.ModelAdmin):
-    pass
+admin.site.register(Profile)
 
-admin.site.register(Blog, BlogAdmin)
+admin.site.register(ProjectImgs)
 
-class ProfileAdmin(admin.ModelAdmin):
-    pass
+admin.site.register(AboutMe)
 
-admin.site.register(Profile, ProfileAdmin)
+admin.site.register(Education)
 
-class ProjectImgsAdmin(admin.ModelAdmin):
-    pass
+admin.site.register(WorkExperience)
 
-admin.site.register(ProjectImgs, ProjectImgsAdmin)
+admin.site.register(Book)

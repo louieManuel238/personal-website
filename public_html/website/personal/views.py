@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.core.mail import send_mail, BadHeaderError
-from . models import Blog, Project, ProjectImgs, Profile
 from django.http import HttpResponseRedirect
 
 from .forms import ContactForm
+from . models import Blog, Project, ProjectImgs, Profile, AboutMe, Education, WorkExperience, Book
 
 # Create your views here.
 def index(request):
@@ -21,7 +21,12 @@ def blogs(request):
     return render(request, 'personal/blogs.html', context={'list': blog_list})
 
 def aboutme(request):
-    return render(request, 'personal/aboutme.html')
+    about_me = AboutMe.objects.get(pk = 1)
+    education = Education.objects.order_by('-endDate','-startDate')
+    workExperience = WorkExperience.objects.order_by('-endDate','-startDate')
+    book = Book.objects.all()
+    return render(request, 'personal/aboutme.html', context={'aboutMe': about_me,
+'education':education, 'workExperience':workExperience, 'book':book})
 
 def project_items(request, project_id="0"):
     project_imgs = ProjectImgs.objects.filter(project_id = project_id)

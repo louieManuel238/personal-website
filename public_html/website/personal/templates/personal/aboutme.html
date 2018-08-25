@@ -25,13 +25,11 @@
             <div class="row">
                 <div class="valign-wrapper col l5">
                     <div class="aboutme_profile">
-                        <img src="{% static 'personal/materialize/img/aboutme/manuel2.jpg'%}"/>
+                        <img src="{%static ''%}{{aboutMe.personalImg}}"/>
                     </div>
                 </div>
                 <p class="col l3">
-                    Manuel is a developer who moved to Canada from the Philippines in 2018.
-                    He is a freelance web application developer striving for success in the
-                    real world. 
+                    {{aboutMe.personalDescription}}
                 </p>
             </div>
         </div>
@@ -48,22 +46,14 @@
                     <h5 class="center">Education</h5>
                     <div>
                         <ul class="collection light">
-                            <li class="collection-item">
-                                <span class="title">Bachelor of Science in Computer Science <span class="secondary-content">2015</span></span>
-                                <i>Saint Louis University, Philippines</i>
-                            </li>
-                            <li class="collection-item">
-                                <span class="title">Computer Systems Servicing <span class="secondary-content">2018</span></span>
-                                <i>Informatics Institute, Philippines</i>
-                            </li>
-                            <li class="collection-item">
-                                <span class="title">Freedom of Information And Protection of Privacy <span class="secondary-content">2018</span></span>
-                                <i>Government of Alberta, Canada</i>
-                            </li>
-                            <li class="collection-item">
-                                    <span class="title">Career Service Professional Eligible<span class="secondary-content">2017</span></span>
-                                    <i>Civil Service Commission, Philippines</i>
-                            </li>
+                            {%for educ in education%}
+                                <li class="collection-item">
+                                    <span class="title">{{educ.title}} 
+                                        <span class="secondary-content">{{educ.startDate}} - {{educ.endDate}}</span>
+                                    </span>
+                                    <i>{{educ.institution}}</i>
+                                </li>
+                            {%endfor%}
                         </ul>
                     </div>
                 </div>
@@ -75,20 +65,14 @@
                         <h5 class="center">Work Experience</h5>
                         <div>
                             <ul class="collection light">
-                                <li class="collection-item">
-                                    <span class="title">Freelance Developer<span class="secondary-content">2017-2018</span></span>
-                                    <i>Baguio City, Philippines</i>
-                                </li>
-                                <li class="collection-item">
-                                    <span class="title">Computer Programmer I <span class="secondary-content">2016-2017</span></span>
-                                    <i>Local Government of Itogon, Philippines</i>
-                                </li>
-                                <li class="collection-item">
-                                    <span class="title">Assistant System Administrator, Trainee
-                                        <span class="secondary-content">2014</span>
-                                    </span>
-                                    <i>Professional Regulation Commission, CAR, Philippines</i>
-                                </li>
+                                {%for work in workExperience%}
+                                    <li class="collection-item">
+                                        <span class="title">{{work.title}} 
+                                            <span class="secondary-content">{{work.startDate}} - {{work.endDate}}</span>
+                                        </span>
+                                        <i>{{work.institution}}</i>
+                                    </li>
+                                {%endfor%}
                             </ul>
                         </div>
                     </div>
@@ -105,51 +89,23 @@
         </div>
         <div class="section">
             <div class="valign-wrapper row">
-                <p class="col l6">I got into music when i was enrolled in guitar music lessons when I was 12.
-                    It's a little late to be considered as a protege but early to be interested in it.
-                    I stopped for some time since I'm not making any progress and took lessons in flute before starting 
-                    university. I then auditioned in the university orchestra after taking their training program.
-                    Being in the organization until I graduated, partly for the scholarship, I can say that I am a bit better.
+                <p class="col l6">
+                    {{aboutMe.hobbyDescription}}
                 </p>
                 <div class="aboutme_profile">
-                    <img src="{%static 'personal/materialize/img/aboutme/flute.jpg'%}" alt="Flute"/>
+                    <img src="{%static ''%}{{aboutMe.hobbyImg}}" alt="Flute"/>
                 </div>
             </div>
         </div>
         <div class="section">
-            <p>I read books and listen to audiobooks, not a lot just a normal amount. 
+            <p>I read books and listen to audiobooks, not a lot. just a normal amount. 
                 Here are some of my favorite books.</p>
                 <ul class="carousel">
+                    {% for book in book%}
                     <li class="carousel-item">
-                        <a target="_blank"  href="https://www.amazon.ca/gp/product/0385526024/ref=as_li_tl?ie=UTF8&camp=15121&creative=330641&creativeASIN=0385526024&linkCode=as2&tag=mypersonal063-20&linkId=af60cf864c40fe48681fb0d5a6f6f293">
-                            <img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=0385526024&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=mypersonal063-20" >
-                        </a>
-                        <img src="//ir-ca.amazon-adsystem.com/e/ir?t=mypersonal063-20&l=am2&o=15&a=0385526024" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                        {% autoescape off%} {{book.link}} {%endautoescape%}
                     </li>
-                    <li class="carousel-item">
-                        <a target="_blank"  href="https://www.amazon.ca/gp/product/0316346624/ref=as_li_tl?ie=UTF8&camp=15121&creative=330641&creativeASIN=0316346624&linkCode=as2&tag=mypersonal063-20&linkId=c8b2b14cbf38fab07343daad94ee8f4d">
-                            <img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=0316346624&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=mypersonal063-20" >
-                        </a>
-                        <img src="//ir-ca.amazon-adsystem.com/e/ir?t=mypersonal063-20&l=am2&o=15&a=0316346624" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-                    </li>
-                    <li class="carousel-item">
-                        <a target="_blank"  href="https://www.amazon.ca/gp/product/1589795474/ref=as_li_tl?ie=UTF8&camp=15121&creative=330641&creativeASIN=1589795474&linkCode=as2&tag=mypersonal063-20&linkId=876c2aa8148a6f12d863f28096da6fff">
-                            <img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=1589795474&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=mypersonal063-20" >
-                        </a>
-                            <img src="//ir-ca.amazon-adsystem.com/e/ir?t=mypersonal063-20&l=am2&o=15&a=1589795474" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-                    </li>
-                    <li class="carousel-item">
-                       <a target="_blank"  href="https://www.amazon.ca/gp/product/0385680910/ref=as_li_tl?ie=UTF8&camp=15121&creative=330641&creativeASIN=0385680910&linkCode=as2&tag=mypersonal063-20&linkId=472cb73d73803e9e55d08a4afbce4600">
-                           <img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=0385680910&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=mypersonal063-20" >
-                       </a>
-                        <img src="//ir-ca.amazon-adsystem.com/e/ir?t=mypersonal063-20&l=am2&o=15&a=0385680910" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-                    </li>
-                    <li class="carousel-item">
-                     <a target="_blank"  href="https://www.amazon.ca/gp/product/1592407366/ref=as_li_tl?ie=UTF8&camp=15121&creative=330641&creativeASIN=1592407366&linkCode=as2&tag=mypersonal063-20&linkId=034c0cc27c412d79f75a1d94b400d03c">
-                         <img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=1592407366&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=mypersonal063-20" >
-                     </a>
-                        <img src="//ir-ca.amazon-adsystem.com/e/ir?t=mypersonal063-20&l=am2&o=15&a=1592407366" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-                    </li>
+                    {%endfor%}
                 </ul>
             <div class="row center">
                 <a href="#" class="waves-effect waves-light btn-large #ffccbc deep-orange lighten-4">Check Out Other Books I Read</a>
