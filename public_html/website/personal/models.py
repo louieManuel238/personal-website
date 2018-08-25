@@ -71,10 +71,10 @@ class AboutMe(models.Model):
     hobbyImg = models.CharField(max_length=300, null=True)
     
     def __str__(self):
-        return self.img_url
+        return self.personalDescription
     
     def get_absolute_url(self):
-        return reverse('project_Images',args=[str(self.id)])
+        return reverse('about_me',args=[str(self.id)])
     
 class Education(models.Model):
     """
@@ -86,10 +86,10 @@ class Education(models.Model):
     institution = models.CharField(max_length=225,null=True)
     
     def __str__(self):
-        return self.img_url
+        return self.title
     
     def get_absolute_url(self):
-        return reverse('project_Images',args=[str(self.id)])
+        return reverse('education',args=[str(self.id)])
     
 class WorkExperience(models.Model):
     """
@@ -101,10 +101,10 @@ class WorkExperience(models.Model):
     institution = models.CharField(max_length=225,null=True)
     
     def __str__(self):
-        return self.img_url
+        return self.title
     
     def get_absolute_url(self):
-        return reverse('project_Images',args=[str(self.id)])
+        return reverse('work_experience',args=[str(self.id)])
 
 class Book(models.Model):
     """
@@ -114,7 +114,7 @@ class Book(models.Model):
     link = models.TextField(null=True)
     author = models.CharField(max_length = 200, null=True)
     def __str__(self):
-        return self.img_url
+        return self.title
     
     def get_absolute_url(self):
-        return reverse('project_Images',args=[str(self.id)])
+        return reverse('books',args=[str(self.id)])
