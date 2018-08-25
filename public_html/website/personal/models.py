@@ -1,5 +1,5 @@
 from django.db import models
-from datetime import datetime
+
 # Create your models here.
 class Profile(models.Model):
     """
@@ -105,17 +105,3 @@ class WorkExperience(models.Model):
     
     def get_absolute_url(self):
         return reverse('work_experience',args=[str(self.id)])
-
-class Book(models.Model):
-    """
-    Books and affiliate marketing links
-    """
-    title = models.CharField(max_length=100)
-    link = models.TextField(null=True)
-    author = models.CharField(max_length=100, null=True)
-    
-    def __str__(self):
-        return self.title
-    
-    def get_absolute_url(self):
-        return reverse('books',args=[str(self.id)])

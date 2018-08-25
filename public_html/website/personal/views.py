@@ -26,7 +26,7 @@ def aboutme(request):
     workExperience = WorkExperience.objects.order_by('-endDate','-startDate')
     #book = Book.objects.all()
     return render(request, 'personal/aboutme.html', context={'aboutMe': about_me,
-'education':education, 'workExperience':workExperience, 'book':book})
+'education':education, 'workExperience':workExperience})
 
 def project_items(request, project_id="0"):
     project_imgs = ProjectImgs.objects.filter(project_id = project_id)
