@@ -21,7 +21,7 @@ def blogs(request):
     return render(request, 'personal/blogs.html', context={'list': blog_list})
 
 def aboutme(request):
-    about_me = AboutMe.objects.get(pk = 1)
+    about_me = AboutMe.objects.all()[:1]
     education = Education.objects.order_by('-endDate','-startDate')
     workExperience = WorkExperience.objects.order_by('-endDate','-startDate')
     book = Book.objects.all()
