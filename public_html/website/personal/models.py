@@ -38,7 +38,7 @@ class Blog(models.Model):
     #fields
     title = models.CharField(max_length=100)
     content = models.TextField()
-    publishDate = models.DateTimeField(auto_now=True, blank=True)
+    publishDate = models.DateTimeField(auto_=True, blank=True)
     thumbnail_url = models.TextField(null=True)
     
     def __str__(self):
