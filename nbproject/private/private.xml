@@ -4,16 +4,17 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Louie_2/Documents/NetBeansProjects/Website/public_html/website/personal/templates/personal/base.html</file>
-            <file>file:/C:/Users/Louie_2/Documents/NetBeansProjects/Website/public_html/website/personal/templates/personal/project_items.html</file>
             <file>file:/C:/Users/Louie_2/Documents/NetBeansProjects/Website/public_html/website/personal/models.py</file>
             <file>file:/C:/Users/Louie_2/Documents/NetBeansProjects/Website/public_html/website/personal/static/personal/materialize/js/init.js</file>
-            <file>file:/C:/Users/Louie_2/Documents/NetBeansProjects/Website/public_html/website/personal/urls.py</file>
             <file>file:/C:/Users/Louie_2/Documents/NetBeansProjects/Website/public_html/website/personal/admin.py</file>
+            <file>file:/C:/Users/Louie_2/Documents/NetBeansProjects/Website/public_html/website/personal/templates/personal/projects.html</file>
+            <file>file:/C:/Users/Louie_2/Documents/NetBeansProjects/Website/public_html/website/personal/templates/personal/index.html</file>
+            <file>file:/C:/Users/Louie_2/Documents/NetBeansProjects/Website/public_html/website/personal/templates/personal/project_items.html</file>
+            <file>file:/C:/Users/Louie_2/Documents/NetBeansProjects/Website/public_html/website/personal/urls.py</file>
+            <file>file:/C:/Users/Louie_2/Documents/NetBeansProjects/Website/Procfile</file>
             <file>file:/C:/Users/Louie_2/Documents/NetBeansProjects/Website/public_html/website/personal/static/personal/materialize/css/styles.css</file>
             <file>file:/C:/Users/Louie_2/Documents/NetBeansProjects/Website/public_html/website/personal/templates/personal/aboutme.html</file>
             <file>file:/C:/Users/Louie_2/Documents/NetBeansProjects/Website/public_html/website/website/urls.py</file>
-            <file>file:/C:/Users/Louie_2/Documents/NetBeansProjects/Website/public_html/website/personal/templates/personal/projects.html</file>
-            <file>file:/C:/Users/Louie_2/Documents/NetBeansProjects/Website/public_html/website/personal/templates/personal/index.html</file>
             <file>file:/C:/Users/Louie_2/Documents/NetBeansProjects/Website/public_html/website/personal/views.py</file>
         </group>
     </open-files>

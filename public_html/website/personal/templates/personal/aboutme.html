@@ -85,9 +85,6 @@
 <div class="separation">
     <div class="container">
         <div class="section">
-                <h5 class="header">Hobbies</h5>
-        </div>
-        <div class="section">
             <div class="valign-wrapper row">
                 <p class="col l6">
                     {{aboutMe.hobbyDescription}}
@@ -98,8 +95,10 @@
             </div>
         </div>
         <div class="section">
-            <p>I read books and listen to audiobooks, not a lot. just a normal amount. 
-                Here are some of my favorite books.</p>
+            <p>
+                Books are also a big part of my personal development. 
+                Here are some of my favorite books that got me into reading.
+            </p>
                 <ul class="carousel">
                     {% for book in book%}
                     <li class="carousel-item">
@@ -111,13 +110,8 @@
                 <a href="#" class="waves-effect waves-light btn-large #ffccbc deep-orange lighten-4">Check Out Other Books I Read</a>
             </div>
         </div>
-        <div class="section">
-                <h6>Games</h6>
-                <p>Mobile Games</p>
-        </div>
     </div>  
 </div>
-<div class="separation">
 <div class="container">
         <div class="section">
                 <h5 class="header">Resume</h5>
@@ -125,6 +119,5 @@
         <div class="section">
                 <a href="#">Download PDF</a><br>
         </div>
-</div>
 </div>
 {%endblock%}
