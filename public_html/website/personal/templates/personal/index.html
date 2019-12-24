@@ -49,44 +49,6 @@
                 </div>
             </div>
         </div>
-    <div class="separation">
-        <div class="container">
-            <div class="section">
-                <div class="container">
-                    <div class="row center">
-                        <h3 class="header col s12 light">My Latest Blog</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col l12 s12">
-                <ul class="collection">
-                    {% for blog in blogs %}
-                    <li class="collection-item ">
-                        <span class="title"> {{blog.title}}
-                            <a href="#!" class="secondary-content">
-                                <i class="material-icons">send</i>
-                            </a>
-                        </span>
-                        <p>{{blog.publishDate}}<br>{{blog.content}}</p>
-                    </li>
-                    {%endfor%}
-                </ul>
-            </div>
-        </div>
-    </div>
-        <div class="separation">
-            <div class="container center col l12 s12">
-                <div class="section">
-                    <div class="container">
-                        <div class="row center">
-                            <h3 class="header col s12 light">Instagram Feed</h3>
-                        </div>
-                    </div>
-                </div>
-                <!-- SnapWidget -->
-               <!-- SnapWidget -->
-<script src="https://snapwidget.com/js/snapwidget.js"></script>
-<iframe src="https://snapwidget.com/embed/544908" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
-            </div>
-        </div>   
+ 
+          
 {%endblock%}

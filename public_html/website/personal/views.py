@@ -7,18 +7,18 @@ from . models import Blog, Project, ProjectImgs, Profile, AboutMe, Education, Wo
 
 # Create your views here.
 def index(request):
-    blog_list = Blog.objects.all()[:3]
+    #blog_list = Blog.objects.all()[:3] 'blogs': blog_list, 
     project_list = Project.objects.all()[:2]
     profile = Profile.objects.first()
-    return render(request, 'personal/index.html', {'blogs': blog_list, 'projects': project_list, 'profile': profile})
+    return render(request, 'personal/index.html', {'projects': project_list, 'profile': profile})
 
 def projects(request):
     project_list = Project.objects.all()
     return render(request, 'personal/projects.html', {'projects': project_list})
 
-def blogs(request):
-    blog_list = Blog.objects.all()
-    return render(request, 'personal/blogs.html', context={'list': blog_list})
+#def blogs(request):
+#    blog_list = Blog.objects.all()
+#    return render(request, 'personal/blogs.html', context={'list': blog_list})
 
 def aboutme(request):
     about_me = AboutMe.objects.first()
@@ -43,3 +43,6 @@ def contact(request):
         except BadHeaderError:
             return HttpResponseRedirect(request.path_info)
     return HttpResponseRedirect(request.META.get('HTTP_REFERER','/'))
+
+def contactPage(request):
+    return render(request, 'personal/contact.html')
