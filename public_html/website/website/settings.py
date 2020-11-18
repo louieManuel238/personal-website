@@ -80,9 +80,10 @@ WSGI_APPLICATION = 'website.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'personal',
-        #'NAME': os.path.join(BASE_DIR, 'sqlite3.db'),
+       # 'ENGINE': 'django.db.backends.mysql',
+       # 'NAME': 'personal',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'sqlite3.db'),
         'USER': 'localhost',
         'PASSWORD': 'localhost',
         'HOST': 'localhost',
@@ -170,6 +171,6 @@ django_heroku.settings(locals())
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'louiemanuel238@gmail.com'
-EMAIL_HOST_PASSWORD = os.environ['SECRET']
+#EMAIL_HOST_PASSWORD = os.environ['SECRET']
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
